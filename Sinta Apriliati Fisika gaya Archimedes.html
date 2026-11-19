@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Gaya Archimedes – Media Interaktif</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--tx:#1b2430;--mut:#586474;--pri:#0b6fb8;--acc:#e6f2fc;--ok:#1a7f4b;--bad:#b3261e;--bd:#d6dee8;--w:#7cc0f2;--o:#e0a030;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10161e;--card:#18212c;--tx:#e8edf3;--mut:#9aa7b7;--pri:#5db4f5;--acc:#1c2e40;--ok:#4fd08b;--bad:#ff8a80;--bd:#2c3a4a;--w:#2f78b0;--o:#b8832a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10161e;--card:#18212c;--tx:#e8edf3;--mut:#9aa7b7;--pri:#5db4f5;--acc:#1c2e40;--ok:#4fd08b;--bad:#ff8a80;--bd:#2c3a4a;--w:#2f78b0;--o:#b8832a;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--pri);color:#fff;padding:22px 16px;text-align:center}
+header h1{margin:0;font-size:1.6rem}header p{margin:4px 0 0;opacity:.9}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px;background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+button,select,input{font:inherit}
+.tb{border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:8px 14px;border-radius:20px;cursor:pointer;white-space:nowrap}
+.tb.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+main{max-width:860px;margin:0 auto;padding:14px}
+section{display:none}section.on{display:block}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;margin:12px 0}
+h2{margin:6px 0}h3{margin:4px 0 8px;color:var(--pri)}
+.f{background:var(--acc);border-left:4px solid var(--pri);padding:8px 12px;border-radius:6px;margin:8px 0;font-size:1.05rem}
+.g{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.r{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:6px 0}
+.r label{flex:1 1 150px;font-size:.92rem}.r input[type=range]{flex:2 1 160px}
+.v{min-width:90px;text-align:right;font-weight:600}
+.out{background:var(--acc);border-radius:8px;padding:8px 12px;margin-top:8px;font-size:.95rem}
+svg{width:100%;height:auto;background:var(--acc);border-radius:8px;display:block}
+.tx{fill:var(--tx);font-size:11px}
+details{margin:8px 0}summary{cursor:pointer;color:var(--pri);font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid var(--bd);padding:4px 8px;text-align:center}
+.ok{color:var(--ok);font-weight:600}.bad{color:var(--bad);font-weight:600}.m{color:var(--mut);font-size:.9rem}
+input[type=number]{width:110px;padding:6px;border:1px solid var(--bd);border-radius:6px;background:var(--card);color:var(--tx)}
+.pb{background:var(--pri);color:#fff;border:0;padding:8px 14px;border-radius:8px;cursor:pointer}
+select{padding:6px;border-radius:6px;border:1px solid var(--bd);background:var(--card);color:var(--tx)}
+.wrap{overflow-x:auto}
+.sc{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.sc figure{margin:0;border-radius:10px;overflow:hidden;border:1px solid var(--bd);background:var(--card);text-align:center;cursor:pointer}
+.sc .st{background:linear-gradient(var(--acc) 55%,var(--w) 55%);height:84px;padding-top:10px}
+.sc .st b{font-size:2.4rem;display:inline-block;animation:bob 3s ease-in-out infinite}
+.sc figure:nth-child(2n) b{animation-delay:-1.2s}.sc figure:nth-child(3n) b{animation-delay:-2s}
+.sc figcaption{padding:6px;font-size:.85rem;min-height:3.6em}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(8px) rotate(5deg)}}
+.an .blk{transform:translateY(0)}.an.play .blk{animation:dn 3s ease-in forwards}
+@keyframes dn{to{transform:translateY(85px)}}
+.an .fd{opacity:0}.an.play .fd{animation:fi .6s forwards}
+.an.play .d1{animation-delay:0s}.an.play .d2{animation-delay:1.8s}.an.play .d3{animation-delay:3.3s}
+@keyframes fi{to{opacity:1}}
+.an .cw{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0)}.an.play .cw{animation:up 1.5s 2s ease-out forwards}
+@keyframes up{to{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.sc .st b{animation:none}}
+</style></head><body>
+<header><h1>🛟 Gaya Archimedes</h1><p>Media pembelajaran interaktif · Fluida Statis · Fisika SMA</p></header>
+<nav id="nav"></nav>
+<main>
+<section id="s0"><div class="c"><h2>🎯 Tujuan Pembelajaran</h2>
+<ol><li>Menjelaskan konsep gaya Archimedes (gaya apung) dan syarat benda terapung, melayang, dan tenggelam.</li>
+<li>Menggunakan persamaan F<sub>A</sub> = ρ<sub>f</sub> · g · V<sub>t</sub> untuk menyelesaikan soal.</li>
+<li>Menganalisis gaya Archimedes, tegangan permukaan, dan viskositas melalui laboratorium virtual.</li>
+<li>Melakukan percobaan bejana berhubungan dan gaya Archimedes untuk menghitung massa jenis berbagai benda.</li>
+<li>Menganalisis hubungan massa jenis fluida dan volume fluida yang dipindahkan terhadap gaya apung.</li></ol></div>
+<div class="c"><h3>👀 Coba tebak! Terapung, melayang, atau tenggelam?</h3><p class="m">Ketuk gambar untuk melihat jawabannya.</p><div class="sc">
+<figure data-a="<b class='ok'>Terapung.</b> Kapal berongga, sehingga ρ rata-rata lebih kecil dari air."><div class="st"><b>🚢</b></div><figcaption>Kapal baja</figcaption></figure>
+<figure data-a="<b class='ok'>Terapung.</b> ρ es ≈ 920 kg/m³, lebih kecil dari air."><div class="st"><b>🧊</b></div><figcaption>Es batu di air</figcaption></figure>
+<figure data-a="<b class='bad'>Tenggelam</b> di air biasa, tetapi mengapung di air garam pekat."><div class="st"><b>🥚</b></div><figcaption>Telur di air biasa</figcaption></figure>
+<figure data-a="<b class='ok'>Melayang.</b> ρ tubuh dan alat ≈ ρ air, sehingga F<sub>A</sub> = w."><div class="st"><b>🤿</b></div><figcaption>Penyelam netral</figcaption></figure>
+<figure data-a="<b class='bad'>Tenggelam.</b> ρ besi lebih besar dari ρ air."><div class="st"><b>⚓</b></div><figcaption>Jangkar kapal</figcaption></figure></div></div>
+<div class="c"><h3>💡 Tahukah kamu?</h3><ul><li>Di Laut Mati, massa jenis air lebih dari 1.200 kg/m³ sehingga orang mudah mengapung sambil membaca koran.</li><li>Kapal selam menyelam dengan memasukkan air ke tangki ballast, dan naik dengan mengeluarkannya.</li><li>Ikan mengatur gelembung renangnya untuk naik atau turun tanpa banyak bergerak.</li></ul></div>
+<div class="c"><h3>🌊 Mengapa kita belajar ini?</h3>
+<p>Gaya Archimedes ada di sekitarmu setiap hari:</p>
+<ul><li><b>Berenang:</b> tubuhmu terasa lebih ringan di kolam. Paru-paru berisi udara membuat massa jenis tubuh mendekati air, sehingga mudah mengapung.</li>
+<li><b>Es batu di minuman:</b> es (±920 kg/m³) lebih ringan dari air, jadi sebagian kecil muncul di permukaan.</li>
+<li><b>Kapal raksasa dari baja bisa terapung</b> karena bentuknya berongga sehingga memindahkan banyak air.</li>
+<li><b>Pelampung dan jaket pelampung</b> menyelamatkan nyawa saat di perahu atau laut.</li>
+<li><b>Telur di air garam:</b> telur tenggelam di air biasa tetapi mengapung di air garam pekat. Di Laut Mati orang mudah mengapung.</li>
+<li><b>Kapal selam, balon udara, dan hidrometer</b> bekerja dengan prinsip yang sama.</li>
+<li><b>Serangga air</b> berjalan di permukaan karena tegangan permukaan, dan <b>madu</b> mengalir lambat karena viskositasnya besar.</li></ul>
+<p>Dengan memahaminya, kamu bisa menjelaskan fenomena sehari-hari, memilih alat keselamatan air dengan tepat, dan memahami teknologi transportasi air.</p></div></section>
+
+<section id="s1"><div class="c"><h2>📘 Materi dan Rumus</h2>
+<h3>🎬 Animasi: Kisah Eureka!</h3><p class="m">Menurut kisah, Archimedes menemukan idenya saat berendam di bak mandi ketika memeriksa mahkota raja. Perhatikan animasinya!</p>
+<div class="an play" id="an"><svg viewBox="0 0 320 200"><rect x="90" y="70" width="110" height="120" fill="none" stroke="currentColor" stroke-width="3" class="tx"/><rect x="92" y="85" width="106" height="103" fill="var(--w)" opacity=".8"/><line x1="198" y1="85" x2="222" y2="92" stroke="currentColor" stroke-width="4" class="tx"/><path class="fd d2" d="M222 92 Q252 95 253 148" fill="none" stroke="var(--w)" stroke-width="3"/><rect x="235" y="150" width="36" height="40" fill="none" stroke="currentColor" stroke-width="2" class="tx"/><rect class="cw" x="237" y="152" width="32" height="36" fill="var(--w)"/><g class="blk"><line x1="145" y1="-100" x2="145" y2="60" stroke="currentColor" class="tx"/><rect x="125" y="60" width="40" height="28" rx="4" fill="var(--o)" stroke="#333"/><text x="145" y="80" text-anchor="middle" font-size="18">👑</text></g><text x="20" y="130" font-size="34">🛁</text></svg>
+<div class="out"><span class="fd d1" style="display:block">1️⃣ Benda dimasukkan ke bejana yang penuh air.</span><span class="fd d2" style="display:block">2️⃣ Air yang tumpah = volume benda yang tercelup.</span><span class="fd d3" style="display:block">3️⃣ Berat air yang tumpah = gaya Archimedes F<sub>A</sub>. Eureka! 🎉</span></div>
+<button class="pb" onclick="rp()">🔁 Putar ulang</button></div>
+<h3>Hukum Archimedes</h3><p>Benda yang tercelup sebagian atau seluruhnya dalam fluida mengalami gaya ke atas sebesar berat fluida yang dipindahkan oleh benda tersebut.</p>
+<div class="f">F<sub>A</sub> = ρ<sub>f</sub> · g · V<sub>t</sub></div>
+<p class="m">ρ<sub>f</sub> = massa jenis fluida (kg/m³), g = percepatan gravitasi (10 m/s²), V<sub>t</sub> = volume benda yang tercelup (m³).</p>
+<h3>Berat semu</h3><div class="f">w<sub>semu</sub> = w − F<sub>A</sub> = w<sub>udara</sub> − w<sub>dalam fluida</sub></div>
+<h3>Terapung, melayang, tenggelam</h3>
+<div class="wrap"><table><tr><th>Keadaan</th><th>Syarat</th><th>Gaya</th></tr><tr><td>Terapung</td><td>ρ<sub>b</sub> &lt; ρ<sub>f</sub></td><td>F<sub>A</sub> = w, V<sub>t</sub>/V<sub>b</sub> = ρ<sub>b</sub>/ρ<sub>f</sub></td></tr><tr><td>Melayang</td><td>ρ<sub>b</sub> = ρ<sub>f</sub></td><td>F<sub>A</sub> = w</td></tr><tr><td>Tenggelam</td><td>ρ<sub>b</sub> &gt; ρ<sub>f</sub></td><td>F<sub>A</sub> &lt; w</td></tr></table></div>
+<svg viewBox="0 0 320 185"><defs><marker id="mg" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="var(--ok)"/></marker><marker id="mr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="var(--bad)"/></marker></defs>
+<g><rect x="5" y="20" width="90" height="130" fill="none" stroke="currentColor" class="tx"/><rect x="6" y="60" width="88" height="89" fill="var(--w)" opacity=".7"/><rect x="35" y="45" width="30" height="30" fill="var(--o)" stroke="#333"/><line x1="50" y1="60" x2="50" y2="30" stroke="var(--ok)" stroke-width="3" marker-end="url(#mg)"/><line x1="50" y1="60" x2="50" y2="90" stroke="var(--bad)" stroke-width="3" marker-end="url(#mr)"/><text x="50" y="170" text-anchor="middle" class="tx">Terapung: F_A = w</text></g>
+<g transform="translate(110,0)"><rect x="5" y="20" width="90" height="130" fill="none" stroke="currentColor" class="tx"/><rect x="6" y="60" width="88" height="89" fill="var(--w)" opacity=".7"/><rect x="35" y="85" width="30" height="30" fill="var(--o)" stroke="#333"/><line x1="50" y1="100" x2="50" y2="70" stroke="var(--ok)" stroke-width="3" marker-end="url(#mg)"/><line x1="50" y1="100" x2="50" y2="130" stroke="var(--bad)" stroke-width="3" marker-end="url(#mr)"/><text x="50" y="170" text-anchor="middle" class="tx">Melayang: F_A = w</text></g>
+<g transform="translate(220,0)"><rect x="5" y="20" width="90" height="130" fill="none" stroke="currentColor" class="tx"/><rect x="6" y="60" width="88" height="89" fill="var(--w)" opacity=".7"/><rect x="35" y="118" width="30" height="30" fill="var(--o)" stroke="#333"/><line x1="50" y1="122" x2="50" y2="108" stroke="var(--ok)" stroke-width="3" marker-end="url(#mg)"/><line x1="50" y1="130" x2="50" y2="148" stroke="var(--bad)" stroke-width="3" marker-end="url(#mr)"/><text x="50" y="170" text-anchor="middle" class="tx">Tenggelam: F_A &lt; w</text></g></svg>
+<p class="m">Panah hijau = gaya Archimedes (F<sub>A</sub>), panah merah = berat benda (w).</p>
+<h3>Massa jenis benda dengan neraca pegas</h3><div class="f">ρ<sub>b</sub> = w<sub>udara</sub> / (w<sub>udara</sub> − w<sub>air</sub>) × ρ<sub>air</sub></div>
+<h3>Bejana berhubungan</h3><p>Dua fluida yang tidak bercampur dalam pipa U setimbang bila tekanan di titik batas sama.</p><div class="f">ρ<sub>1</sub> · h<sub>1</sub> = ρ<sub>2</sub> · h<sub>2</sub></div>
+<h3>Tegangan permukaan</h3><div class="f">γ = F / d  (d = 2L untuk selaput dua sisi pada kawat sepanjang L)</div><p class="m">Satuan N/m. Contoh: air ±0,072 N/m.</p>
+<h3>Viskositas (Hukum Stokes)</h3><div class="f">F<sub>s</sub> = 6π η r v  ·  v<sub>t</sub> = 2r²(ρ<sub>b</sub> − ρ<sub>f</sub>)g / 9η</div><p class="m">η = koefisien viskositas (Pa·s). Makin kental fluida, makin lambat benda jatuh.</p></div></section>
+
+<section id="s2"><div class="c"><h2>✏️ Contoh Soal dan Pembahasan</h2>
+<p><b>Soal 1.</b> Balok bervolume 200 cm³ tercelup seluruhnya di air (ρ = 1.000 kg/m³). Hitung gaya Archimedes! (g = 10 m/s²)</p>
+<details><summary>Lihat pembahasan</summary><p>V = 200 cm³ = 2 × 10⁻⁴ m³<br>F<sub>A</sub> = ρ g V = 1.000 × 10 × 2 × 10⁻⁴ = <b>2 N</b></p></details>
+<p><b>Soal 2.</b> Sebuah batu beratnya 30 N di udara dan 20 N saat di dalam air. Tentukan massa jenis batu!</p>
+<details><summary>Lihat pembahasan</summary><p>F<sub>A</sub> = 30 − 20 = 10 N<br>V = F<sub>A</sub>/(ρ g) = 10/(1.000 × 10) = 10⁻³ m³<br>m = w/g = 3 kg<br>ρ<sub>b</sub> = m/V = <b>3.000 kg/m³</b> (atau 30/(30−20) × 1.000 = 3.000)</p></details>
+<p><b>Soal 3.</b> Kayu bermassa jenis 600 kg/m³ dan volume 0,5 m³ mengapung di air. Berapa volume yang tercelup dan gaya apungnya?</p>
+<details><summary>Lihat pembahasan</summary><p>V<sub>t</sub>/V<sub>b</sub> = ρ<sub>b</sub>/ρ<sub>f</sub> = 0,6, sehingga V<sub>t</sub> = <b>0,3 m³</b>.<br>F<sub>A</sub> = 1.000 × 10 × 0,3 = <b>3.000 N</b> = berat kayu (600 × 0,5 × 10 = 3.000 N) ✔</p></details>
+<p><b>Soal 4.</b> Mengapa kapal baja bisa terapung, sedangkan paku baja tenggelam?</p>
+<details><summary>Lihat pembahasan</summary><p>Kapal berongga, sehingga massa jenis rata-rata kapal (baja + udara di dalamnya) lebih kecil dari air dan memindahkan banyak air. Paku padat, ρ = 7.800 kg/m³ &gt; ρ air, sehingga F<sub>A</sub> &lt; w.</p></details></div></section>
+
+<section id="s3">
+<div class="c"><h2>🔬 Laboratorium Virtual</h2><p class="m">Pilih percobaan. Gunakan g = 10 m/s². Catat pengamatanmu pada buku kerja.</p>
+<div class="r" id="lnav"></div></div>
+
+<div id="L0" class="lab"><div class="c"><h3>Percobaan 1 · Menganalisis gaya Archimedes, tegangan permukaan, dan viskositas</h3>
+<div class="r" id="snav"></div>
+<div id="A1" class="sub"><div class="g"><div>
+<svg viewBox="0 0 320 220"><rect x="10" y="40" width="300" height="170" fill="none" stroke="currentColor" class="tx"/><rect id="aw" x="11" y="70" width="298" height="139" fill="var(--w)" opacity=".75"/><rect id="ab" x="130" y="100" width="60" height="60" fill="var(--o)" stroke="#333"/><text id="at" x="160" y="135" text-anchor="middle" class="tx" font-weight="700">benda</text></svg></div><div>
+<div class="r"><label>Massa jenis fluida ρf</label><input id="rf" type="range" min="700" max="1400" step="10" value="1000"><span class="v" id="rfv"></span></div>
+<div class="r"><label>Massa jenis benda ρb</label><input id="rb" type="range" min="300" max="8000" step="10" value="2700"><span class="v" id="rbv"></span></div>
+<div class="r"><label>Volume benda</label><input id="rvv" type="range" min="50" max="500" step="10" value="200"><span class="v" id="rvvv"></span></div>
+<div class="r"><button class="tb" onclick="pre(1000,600)">Kayu di air</button><button class="tb" onclick="pre(1000,920)">Es di air</button><button class="tb" onclick="pre(1200,1100)">Telur di air garam</button><button class="tb" onclick="pre(1000,7800)">Besi di air</button></div>
+<div class="out" id="ao"></div></div></div></div>
+
+<div id="A2" class="sub" hidden><div class="g"><div>
+<svg viewBox="0 0 320 200"><rect x="40" y="30" width="6" height="150" class="tx"/><rect x="274" y="30" width="6" height="150" class="tx"/><rect x="40" y="174" width="240" height="6" class="tx"/><rect x="46" y="80" width="228" height="4" fill="var(--w)"/><rect id="sf" x="150" y="80" width="2" height="2" fill="var(--pri)"/><rect id="sw" x="94" y="80" width="132" height="2" fill="var(--pri)"/><text x="160" y="22" class="tx" text-anchor="middle">Selaput sabun pada kerangka kawat</text><text id="sl2" x="160" y="125" text-anchor="middle" class="tx">L</text></svg>
+<p class="m">Selaput punya dua permukaan, sehingga gaya tarik total F = γ · 2L.</p></div><div>
+<div class="r"><label>Cairan</label><select id="gl"><option value="0.072">Air (0,072 N/m)</option><option value="0.025">Air sabun (0,025 N/m)</option><option value="0.022">Alkohol (0,022 N/m)</option><option value="0.47">Raksa (0,47 N/m)</option></select></div>
+<div class="r"><label>Panjang kawat L</label><input id="gL" type="range" min="2" max="10" step="0.5" value="5"><span class="v" id="gLv"></span></div>
+<div class="out" id="go"></div></div></div></div>
+
+<div id="A3" class="sub" hidden><div class="g"><div>
+<svg viewBox="0 0 320 220"><rect x="110" y="10" width="100" height="200" fill="var(--w)" opacity=".7" stroke="currentColor" class="tx" id="vt"/><circle id="vb" cx="160" cy="25" r="10" fill="#777" stroke="#222"/><text x="160" y="218" text-anchor="middle" class="tx">tabung berisi fluida</text></svg></div><div>
+<div class="r"><label>Fluida</label><select id="vf"><option value="0.001|1000">Air (η = 0,001 Pa·s)</option><option value="0.1|900">Oli (η = 0,1)</option><option value="1.4|1260">Gliserin (η = 1,4)</option><option value="10|1400">Madu (η = 10)</option></select></div>
+<div class="r"><label>Bola</label><select id="vm"><option value="2500">Kelereng kaca (2.500)</option><option value="7800">Bola baja (7.800)</option></select></div>
+<div class="r"><label>Jari-jari bola r</label><input id="vr" type="range" min="1" max="10" step="0.5" value="3"><span class="v" id="vrv"></span></div>
+<div class="out" id="vo"></div><p class="m">Animasi bersifat relatif: makin kental, makin lambat.</p><button class="pb" onclick="drop()">▶ Jatuhkan bola</button></div></div></div>
+</div></div>
+
+<div id="L1" class="lab" hidden><div class="c"><h3>Percobaan 2 · Bejana berhubungan dan massa jenis benda</h3>
+<h4>A. Bejana berhubungan (pipa U)</h4><div class="g"><div>
+<svg viewBox="0 0 320 210"><rect x="60" y="20" width="6" height="170" class="tx"/><rect x="214" y="20" width="6" height="170" class="tx"/><rect x="60" y="184" width="160" height="6" class="tx"/><rect id="uw" x="66" y="100" width="148" height="84" fill="var(--w)"/><rect id="ul" x="214" y="40" width="0" height="0" fill="var(--o)"/><rect id="ux" x="66" y="40" width="0" height="0" fill="var(--o)"/><rect id="uq" x="66" y="100" width="6" height="4" fill="none"/><text id="ut1" x="20" y="60" class="tx"></text><text x="230" y="60" class="tx">fluida X</text><text x="6" y="150" class="tx">air</text></svg></div><div>
+<div class="r"><label>Fluida X</label><select id="ux1"><option value="800">Minyak</option><option value="790">Alkohol</option><option value="1260">Gliserin</option><option value="680">Bensin</option></select><button class="pb" onclick="ud()">Acak fluida</button></div>
+<div class="r"><label>Tinggi kolom air h<sub>air</sub></label><input id="uh" type="range" min="5" max="20" step="0.5" value="10"><span class="v" id="uhv"></span></div>
+<div class="out" id="uo"></div>
+<div class="r">ρ fluida X = <input type="number" id="uin" placeholder="kg/m³"> <button class="pb" onclick="uc()">Periksa</button> <span id="ur"></span></div></div></div>
+<p class="m">Petunjuk: ρ<sub>air</sub> · h<sub>air</sub> = ρ<sub>X</sub> · h<sub>X</sub>. Ukur kedua tinggi, lalu hitung ρ<sub>X</sub>.</p></div>
+
+<div class="c"><h4>B. Massa jenis benda dengan neraca pegas dan gaya Archimedes</h4><div class="g"><div>
+<div class="r"><label>Benda</label><select id="ob"><option value="2700">Aluminium</option><option value="7800">Besi</option><option value="8900">Tembaga</option><option value="2500">Kaca</option><option value="11300">Timbal</option></select><button class="pb" onclick="wg()">Timbang</button></div>
+<div class="out" id="wo">Tekan Timbang untuk memulai.</div></div><div>
+<div class="r">ρ benda = <input type="number" id="win" placeholder="kg/m³"> <button class="pb" onclick="wc()">Periksa</button> <span id="wr"></span></div>
+<p class="m">Gunakan ρ = w<sub>udara</sub>/(w<sub>udara</sub> − w<sub>air</sub>) × 1.000 kg/m³. Ulangi untuk benda lain dan bandingkan.</p></div></div></div></div>
+
+<div id="L2" class="lab" hidden><div class="c"><h3>Percobaan 3 · Hubungan ρ fluida dan volume fluida terhadap gaya apung</h3>
+<p class="m">Variasikan fluida dan volume benda yang tercelup (volume fluida yang dipindahkan), lalu catat data.</p>
+<div class="g"><div>
+<div class="r"><label>Fluida</label><select id="tf"><option value="800">Minyak (800)</option><option value="1000" selected>Air (1.000)</option><option value="1200">Air garam (1.200)</option></select></div>
+<div class="r"><label>Volume dipindahkan</label><input id="tv" type="range" min="50" max="500" step="50" value="200"><span class="v" id="tvv"></span></div>
+<div class="out" id="to"></div>
+<div class="r"><button class="pb" onclick="rec()">➕ Catat data</button><button class="tb" onclick="D=[];dr()">Hapus data</button><label style="flex:0 0 auto"><input type="checkbox" id="tl" onchange="dr()"> garis teori</label></div>
+<div class="wrap"><table id="tt"><tr><th>ρ<sub>f</sub> (kg/m³)</th><th>V (cm³)</th><th>F<sub>A</sub> (N)</th></tr></table></div></div><div>
+<svg viewBox="0 0 320 230" id="ch"></svg><p class="m"><span style="color:#d4a017">●</span> 800 · <span style="color:#2a8be0">●</span> 1.000 · <span style="color:#d6336c">●</span> 1.200</p></div></div>
+<details><summary>Kesimpulan</summary><p>F<sub>A</sub> berbanding lurus dengan massa jenis fluida (volume tetap) dan berbanding lurus dengan volume fluida yang dipindahkan (ρ tetap): F<sub>A</sub> = ρ<sub>f</sub> g V<sub>t</sub>. Grafik F<sub>A</sub>–V berupa garis lurus melalui titik asal, dengan kemiringan ρ<sub>f</sub>·g.</p></details></div></div>
+</section></main>
+<script>
+const $=i=>document.getElementById(i),g=10,F=(x,d=2)=>(+x).toFixed(d).replace('.',',');
+function tabs(el,names,fn,cls){el.innerHTML='';names.forEach((n,i)=>{const b=document.createElement('button');b.className='tb'+(i?'':' on');b.textContent=n;b.onclick=()=>{[...el.children].forEach(c=>c.classList.remove('on'));b.classList.add('on');fn(i)};el.appendChild(b)})}
+const secs=['Tujuan','Materi','Contoh Soal','Lab Virtual'];
+tabs($('nav'),secs,i=>{secs.forEach((_,j)=>$('s'+j).classList.toggle('on',j==i));scrollTo(0,0)});$('s0').classList.add('on');
+tabs($('lnav'),['Percobaan 1','Percobaan 2','Percobaan 3'],i=>[0,1,2].forEach(j=>$('L'+j).hidden=j!=i));
+tabs($('snav'),['Gaya Archimedes','Tegangan permukaan','Viskositas'],i=>[1,2,3].forEach(j=>$('A'+j).hidden=j!=i+1));
+/* 1A */
+function pre(f,b){$('rf').value=f;$('rb').value=b;a1()}
+function a1(){const rf=+$('rf').value,rb=+$('rb').value,V=+$('rvv').value,Vm=V*1e-6,w=rb*Vm*g;
+$('rfv').textContent=rf+' kg/m³';$('rbv').textContent=rb+' kg/m³';$('rvvv').textContent=V+' cm³';
+const fl=rb<rf,eq=Math.abs(rb-rf)<=10,fr=fl?rb/rf:1,FA=rf*g*Vm*(eq?1:fr),s=Math.cbrt(V)*12,sy=70;let top;
+if(eq)top=sy+(209-sy-s)/2;else if(fl)top=sy-(1-fr)*s;else top=209-s;
+const b=$('ab');b.setAttribute('y',top);b.setAttribute('height',s);b.setAttribute('width',s);b.setAttribute('x',160-s/2);$('at').setAttribute('y',top+s/2+4);
+const st=eq?'MELAYANG':fl?'TERAPUNG':'TENGGELAM';
+$('ao').innerHTML=`Berat benda w = ${F(w)} N<br>Gaya Archimedes F<sub>A</sub> = ${F(FA)} N<br>Berat semu = ${F(Math.max(0,w-FA))} N<br>Bagian tercelup = ${F(fr*100,0)}%<br><b>Status: ${st}</b> (ρb ${eq?'=':fl?'&lt;':'&gt;'} ρf)`}
+['rf','rb','rvv'].forEach(i=>$(i).oninput=a1);a1();
+/* 1B */
+function a2(){const y=+$('gl').value,L=+$('gL').value;$('gLv').textContent=F(L,1)+' cm';const Fm=y*2*L/100;
+$('sw').setAttribute('width',L*22);$('sw').setAttribute('x',160-L*11);$('sl2').textContent='L = '+F(L,1)+' cm';
+$('go').innerHTML=`γ = ${F(y,3)} N/m<br>F = γ · 2L = ${F(y,3)} × 2 × ${F(L/100,3)} = <b>${F(Fm*1000,2)} mN</b><br><span class="m">Makin besar γ atau L, makin besar gaya tarik selaput.</span>`}
+$('gl').onchange=a2;$('gL').oninput=a2;a2();
+/* 1C */
+let raf=0;function a3(){const[e,rf]=$('vf').value.split('|').map(Number),rb=+$('vm').value,r=+$('vr').value/1000;
+$('vrv').textContent=F(r*1000,1)+' mm';const v=2*r*r*(rb-rf)*g/(9*e);$('vo').innerHTML=`η = ${F(e,3)} Pa·s, ρf = ${rf} kg/m³<br>Kecepatan terminal v<sub>t</sub> = <b>${v>=0.01?F(v,3):F(v*1000,3)+'×10⁻³'} m/s</b>`;return Math.max(0,v)}
+['vf','vm','vr'].forEach(i=>$(i).oninput=$(i).onchange=a3);a3();
+function drop(){cancelAnimationFrame(raf);const v=a3(),sp=45*Math.log10(1+v*1000);let y=25,t0=performance.now();
+(function s(t){const dt=(t-t0)/1000;t0=t;y+=sp*dt;if(y>195)y=25;$('vb').setAttribute('cy',y);raf=requestAnimationFrame(s)})(t0)}
+/* 2A */
+function ud(){const o=$('ux1');o.selectedIndex=Math.floor(Math.random()*o.options.length);u()}
+function u(){const rx=+$('ux1').value,h=+$('uh').value,hx=1000*h/rx;$('uhv').textContent=F(h,1)+' cm';const k=7,base=184,tw=base-h*k,tx=base-hx*k;
+$('uw').setAttribute('y',tw);$('uw').setAttribute('height',base-tw);
+$('ul').setAttribute('x',214);$('ul').setAttribute('width',0);
+$('ux').setAttribute('x',66);
+$('uq').setAttribute('width',0);
+let el=$('ul');el.setAttribute('x',148);el.setAttribute('y',tx);el.setAttribute('width',66);el.setAttribute('height',tw-tx);
+const w=$('uw');w.setAttribute('x',66);w.setAttribute('width',148);w.setAttribute('height',base-tw);
+$('ut1').textContent='';
+$('uo').innerHTML=`Tinggi air h<sub>air</sub> = ${F(h,1)} cm<br>Tinggi fluida X h<sub>X</sub> = ${F(hx,1)} cm<br><span class="m">Ukur kedua tinggi, lalu hitung ρ<sub>X</sub>.</span>`;$('ur').textContent=''}
+$('ux1').onchange=u;$('uh').oninput=u;u();
+function uc(){const rx=+$('ux1').value,a=+$('uin').value;$('ur').innerHTML=Math.abs(a-rx)/rx<=.05?'<span class="ok">✔ Benar (≈ '+rx+' kg/m³)</span>':'<span class="bad">✘ Coba hitung lagi</span>'}
+/* 2B */
+let W=null;function wg(){const r=+$('ob').value,V=(40+Math.floor(Math.random()*9)*10);const wu=r*V*1e-6*g,wa=wu-1000*V*1e-6*g;W={r,wu,wa};
+$('wo').innerHTML=`Neraca pegas di udara: <b>${F(wu)} N</b><br>Neraca pegas di dalam air: <b>${F(wa)} N</b><br>F<sub>A</sub> = ${F(wu-wa)} N`;$('wr').textContent=''}
+function wc(){if(!W){$('wr').textContent='Timbang dulu';return}const a=+$('win').value;$('wr').innerHTML=Math.abs(a-W.r)/W.r<=.05?'<span class="ok">✔ Benar (≈ '+W.r+' kg/m³)</span>':'<span class="bad">✘ Coba hitung lagi</span>'}
+/* 3 */
+let D=[];const col={800:'#d4a017',1000:'#2a8be0',1200:'#d6336c'};
+function t(){const f=+$('tf').value,V=+$('tv').value;$('tvv').textContent=V+' cm³';$('to').innerHTML=`F<sub>A</sub> = ${f} × 10 × ${V}×10⁻⁶ = <b>${F(f*g*V*1e-6)} N</b>`}
+function rec(){const f=+$('tf').value,V=+$('tv').value;if(D.some(d=>d.f==f&&d.V==V))return;D.push({f,V,A:f*g*V*1e-6});dr()}
+function dr(){const T=$('tt');T.innerHTML='<tr><th>ρ<sub>f</sub> (kg/m³)</th><th>V (cm³)</th><th>F<sub>A</sub> (N)</th></tr>';D.forEach(d=>T.innerHTML+=`<tr><td>${d.f}</td><td>${d.V}</td><td>${F(d.A)}</td></tr>`);
+const x=v=>40+v/500*260,y=v=>200-v/6*180;let s='<line x1="40" y1="200" x2="300" y2="200" stroke="currentColor" class="tx"/><line x1="40" y1="20" x2="40" y2="200" stroke="currentColor" class="tx"/>';
+for(let i=0;i<=500;i+=100)s+=`<text x="${x(i)}" y="214" class="tx" text-anchor="middle">${i}</text>`;for(let i=0;i<=6;i+=2)s+=`<text x="34" y="${y(i)+4}" class="tx" text-anchor="end">${i}</text>`;
+s+='<text x="170" y="228" class="tx" text-anchor="middle">V (cm³)</text><text x="10" y="14" class="tx">F_A (N)</text>';
+if($('tl').checked)Object.keys(col).forEach(f=>s+=`<line x1="${x(0)}" y1="${y(0)}" x2="${x(500)}" y2="${y(f*g*5e-4)}" stroke="${col[f]}" stroke-dasharray="4" opacity=".6"/>`);
+D.forEach(d=>s+=`<circle cx="${x(d.V)}" cy="${y(d.A)}" r="5" fill="${col[d.f]}"/>`);$('ch').innerHTML=s}
+$('tf').onchange=t;$('tv').oninput=t;t();dr();
+function rp(){const s=$('an');s.classList.remove('play');void s.getBoundingClientRect();s.classList.add('play')}
+document.querySelectorAll('.sc figure').forEach(f=>f.onclick=()=>{f.querySelector('figcaption').innerHTML=f.dataset.a});
+</script></body></html>
